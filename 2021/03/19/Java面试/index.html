@@ -944,15 +944,15 @@ public List&lt;List&lt;Integer&gt;&gt; levelOrder(Node root) &#123;
           
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
             <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
-            </div>
             <div class="tab-pane valine" id="comment-valine">
               <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
             </div>
         </div>
       </div>
@@ -1204,26 +1204,6 @@ public List&lt;List&lt;Integer&gt;&gt; levelOrder(Node root) &#123;
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '4791ddfa16b0bbb0f6eb',
-      clientSecret: 'ce16879dc65ad3af922ba61c4939950a8abe44cd',
-      repo        : 'BlobComment',
-      owner       : 'KingPuiWong',
-      admin       : ['KingPuiWong'],
-      id          : '3e3ea1005bb1e0ddf3414f1b3d7ccd33',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
@@ -1250,6 +1230,26 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       serverURLs : ''
     });
   }, window.Valine);
+});
+</script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '4791ddfa16b0bbb0f6eb',
+      clientSecret: 'ce16879dc65ad3af922ba61c4939950a8abe44cd',
+      repo        : 'BlobComment',
+      owner       : 'KingPuiWong',
+      admin       : ['KingPuiWong'],
+      id          : '3e3ea1005bb1e0ddf3414f1b3d7ccd33',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
 });
 </script>
 
