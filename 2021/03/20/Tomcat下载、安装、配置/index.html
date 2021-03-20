@@ -20,17 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="My Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="My Blog">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="Tomcat下载、安装、配置     选择windows的installer下载即可   注意下图这个地方   它会自动找到JRE位置，如果用户没有安装JRE，可以修改指向JDK目录    在电脑的环境变量中配置   在浏览器输入localhost:8080测试是否成功">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomcat下载、安装、配置">
+<meta property="og:url" content="http://example.com/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="My Blog">
+<meta property="og:description" content="Tomcat下载、安装、配置     选择windows的installer下载即可   注意下图这个地方   它会自动找到JRE位置，如果用户没有安装JRE，可以修改指向JDK目录    在电脑的环境变量中配置   在浏览器输入localhost:8080测试是否成功">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ftp.bmp.ovh/imgs/2021/03/7ad92cb15ab8fe63.jpg">
+<meta property="og:image" content="https://ftp.bmp.ovh/imgs/2021/03/4e1791ea5f1c5b6e.jpg">
+<meta property="article:published_time" content="2021-03-20T11:38:41.000Z">
+<meta property="article:modified_time" content="2021-03-20T11:46:09.515Z">
 <meta property="article:author" content="KingPuiWong">
+<meta property="article:tag" content="Tomcat">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ftp.bmp.ovh/imgs/2021/03/7ad92cb15ab8fe63.jpg">
 
-<link rel="canonical" href="http://example.com/archives/2021/">
+<link rel="canonical" href="http://example.com/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/">
 
 
 <script id="page-configurations">
@@ -38,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | My Blog</title>
+  <title>Tomcat下载、安装、配置 | My Blog</title>
   
 
 
@@ -152,76 +158,139 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="KingPuiWong">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Tomcat下载、安装、配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-20 19:38:41 / 修改时间：19:46:09" itemprop="dateCreated datePublished" datetime="2021-03-20T19:38:41+08:00">2021-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/" class="post-meta-item leancloud_visitors" data-flag-title="Tomcat下载、安装、配置" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-20T19:38:41+08:00"
-              content="2021-03-20">
-          03-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/" itemprop="url">
-            <span itemprop="name">Tomcat下载、安装、配置</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-19T22:04:22+08:00"
-              content="2021-03-19">
-          03-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/19/Java%E9%9D%A2%E8%AF%95/" itemprop="url">
-            <span itemprop="name">Java面试</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="Tomcat下载、安装、配置"><a href="#Tomcat下载、安装、配置" class="headerlink" title="Tomcat下载、安装、配置"></a>Tomcat下载、安装、配置</h1><p> <img src="https://ftp.bmp.ovh/imgs/2021/03/7ad92cb15ab8fe63.jpg" alt="6">  </p>
+<ul>
+<li>选择windows的installer下载即可  </li>
+<li>注意下图这个地方<br><img src="https://ftp.bmp.ovh/imgs/2021/03/4e1791ea5f1c5b6e.jpg" alt="7"> </li>
+</ul>
+<p>它会自动找到JRE位置，如果用户没有安装JRE，可以修改指向JDK目录  </p>
+<ul>
+<li>在电脑的环境变量中配置  </li>
+<li>在浏览器输入localhost:8080测试是否成功</li>
+</ul>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Tomcat/" rel="tag"># Tomcat</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/19/Java%E9%9D%A2%E8%AF%95/" rel="prev" title="Java面试">
+      <i class="fa fa-chevron-left"></i> Java面试
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+        </div>
+      </div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -268,6 +337,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">Tomcat下载、安装、配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -475,6 +545,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '4791ddfa16b0bbb0f6eb',
+      clientSecret: 'ce16879dc65ad3af922ba61c4939950a8abe44cd',
+      repo        : 'BlobComment',
+      owner       : 'KingPuiWong',
+      admin       : ['KingPuiWong'],
+      id          : 'dd3add0d04f59d465e12f248cab6207b',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 
 <script>
