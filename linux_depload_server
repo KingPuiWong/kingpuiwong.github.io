@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="My Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="项目部署 确定项目所需要下载的资源  到各官网上找到你要的资源的下载路径，复制下载连接  到linux服务器的某个路径（个人习惯）,下载到这个目录下 1wget -i -c 下载路径 如果需要本地上传资源 123&#x2F;&#x2F;安装lrzsz工具包yum  install lrzsz&#x2F;&#x2F; 在xshell控制台输入 rz  即可上传本地资源 如果下载的资源是tar.gz后缀的 1tar -zxvf  文件名称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建服务器">
+<meta property="og:url" content="http://example.com/linux_depload_server">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="My Blog">
+<meta property="og:description" content="项目部署 确定项目所需要下载的资源  到各官网上找到你要的资源的下载路径，复制下载连接  到linux服务器的某个路径（个人习惯）,下载到这个目录下 1wget -i -c 下载路径 如果需要本地上传资源 123&#x2F;&#x2F;安装lrzsz工具包yum  install lrzsz&#x2F;&#x2F; 在xshell控制台输入 rz  即可上传本地资源 如果下载的资源是tar.gz后缀的 1tar -zxvf  文件名称">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-19T15:14:14.000Z">
-<meta property="article:modified_time" content="2021-03-19T15:41:14.378Z">
+<meta property="article:published_time" content="2021-03-20T11:56:03.000Z">
+<meta property="article:modified_time" content="2021-03-20T11:57:11.808Z">
 <meta property="article:author" content="KingPuiWong">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/">
+<link rel="canonical" href="http://example.com/linux_depload_server">
 
 
 <script id="page-configurations">
@@ -40,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>categories | My Blog
-</title>
+  <title>搭建服务器 | My Blog</title>
   
 
 
@@ -154,51 +154,165 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/linux_depload_server">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="KingPuiWong">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搭建服务器
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-03-20 19:56:03 / 修改时间：19:57:11" itemprop="dateCreated datePublished" datetime="2021-03-20T19:56:03+08:00">2021-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/linux_depload_server" class="post-meta-item leancloud_visitors" data-flag-title="搭建服务器" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/linux_depload_server#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/linux_depload_server" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 
-</div>
+        </div>
+      </header>
 
-</header>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 2 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
+        <h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h1><ul>
+<li><p>确定项目所需要下载的资源</p>
+</li>
+<li><p>到各官网上找到你要的资源的下载路径，复制下载连接</p>
+</li>
+<li><p>到linux服务器的某个路径（个人习惯）,下载到这个目录下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -i -c 下载路径</span><br></pre></td></tr></table></figure></li>
+<li><p>如果需要本地上传资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装lrzsz工具包</span></span><br><span class="line">yum  install lrzsz</span><br><span class="line"><span class="comment">// 在xshell控制台输入 rz  即可上传本地资源</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如果下载的资源是tar.gz后缀的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf  文件名称</span><br></pre></td></tr></table></figure></li>
+<li><p>如果下载的资源是zip后缀的,现在linux服务器下载unzip命令资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找unzip资源的命令</span></span><br><span class="line">yum list unzip*</span><br><span class="line"><span class="comment">//下载unzip资源的命令</span></span><br><span class="line">yum install 资源名称</span><br></pre></td></tr></table></figure></li>
+<li><p>下载jdk   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找jdk资源的命令</span></span><br><span class="line">yum list java*</span><br><span class="line"><span class="comment">//下载jdk资源的命令</span></span><br><span class="line">yum install 资源名称</span><br></pre></td></tr></table></figure></li>
+<li><p>下载Redis</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找redis资源的命令</span></span><br><span class="line">yum list redis*</span><br><span class="line"><span class="comment">//下载jdk资源的命令</span></span><br><span class="line">yum install 资源名称</span><br><span class="line"><span class="comment">// 如果启动不了redis,使用此命令后再启动</span></span><br><span class="line">redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure></li>
+<li><p>解压缩好maven后，进行相应的配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 进入linux配置文件</span></span><br><span class="line">vim /etc/profile</span><br><span class="line"><span class="comment">//修改环境变量</span></span><br><span class="line">MAVEN_HOME=/usr/local/maven</span><br><span class="line">export MAVEN_HOME</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;MAVEN_HOME&#125;/bin</span><br><span class="line"><span class="comment">// 更换maven配置文件，使用阿里云镜像，提高maven仓库的下载速度</span></span><br><span class="line">vim /conf/setting.xml</span><br><span class="line"></span><br><span class="line">&lt;mirror&gt;  </span><br><span class="line">  &lt;id&gt;alimaven&lt;/id&gt;  </span><br><span class="line">  &lt;name&gt;aliyun maven&lt;/name&gt;  </span><br><span class="line">  &lt;url&gt;http:<span class="comment">//maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;  </span></span><br><span class="line">  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;          </span><br><span class="line">&lt;/mirror&gt;</span><br><span class="line"><span class="comment">// 最后执行一下命令，使得环境变量生效</span></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>下载mysql的npm包（自己的百度网盘有）</p>
+<ul>
+<li><p>解压后用 <code>yum install -y npm包文件名</code>安装</p>
+</li>
+<li><p><code>yum list mysql* </code>找到我们要下载的MySQL服务器</p>
+</li>
+<li><p><code>yum install -y mysql服务器包名 </code>进行安装</p>
+</li>
+<li><p><code>systemctl mysqld start </code>启动MySQL服务</p>
+</li>
+<li><p><code>systemctl status mysqld </code>查看MySQL服务器状态</p>
+</li>
+<li><p><code>grep &#39;password&#39; /var/log/mysqld.log </code>查找MySQL服务器刚启动时自动生成的密码</p>
+</li>
+<li><p><code>mysql -u root -p </code>使用自动生成的密码进入MySQL服务器</p>
+</li>
+<li><p><code> alter user root@localhost identified by &#39;new password&#39;</code>修改MySQL密码   </p>
+</li>
+<li><p>以新密码进入数据库<code>mysql -u root -p </code></p>
+</li>
+<li><p>创建你所需的数据库<code>create database ~~~ </code></p>
+</li>
+<li><p>使用你所创建的数据库,导入sql文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /usr/database.sql;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>安装配置Elasticsearch</p>
+<ul>
+<li>先解压elasticsearch</li>
+<li>再解压elasticsearchIk到elasticsearch的plugins/ik目录(unzip -d)</li>
+<li>修改elasticsearch的配置文件（config目录）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//修改clusth名字和存放地址(一般放在和kfka存放地址同个目录)</span></span><br><span class="line">vim elasticsearch.yml</span><br><span class="line"><span class="comment">//修改elasticserch的jvm占量</span></span><br><span class="line"> vim jvm.options</span><br><span class="line"> </span><br></pre></td></tr></table></figure></li>
+</ul>
+
     </div>
-    
 
     
     
     
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/" rel="prev" title="Tomcat下载、安装、配置">
+      <i class="fa fa-chevron-left"></i> Tomcat下载、安装、配置
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -263,6 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text">项目部署</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -481,7 +596,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'BlobComment',
       owner       : 'KingPuiWong',
       admin       : ['KingPuiWong'],
-      id          : 'a676607444a8bc8b150c9a3aff884e61',
+      id          : 'deb6b8e6bddfb65c8113c078f0fa1e45',
         language: '',
       distractionFreeMode: true
     });

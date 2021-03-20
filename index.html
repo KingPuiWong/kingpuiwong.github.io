@@ -158,6 +158,147 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/linux_depload_server">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="KingPuiWong">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/linux_depload_server" class="post-title-link" itemprop="url">搭建服务器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-20 19:56:03 / 修改时间：19:57:11" itemprop="dateCreated datePublished" datetime="2021-03-20T19:56:03+08:00">2021-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/linux_depload_server" class="post-meta-item leancloud_visitors" data-flag-title="搭建服务器" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/linux_depload_server#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/linux_depload_server" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h1><ul>
+<li><p>确定项目所需要下载的资源</p>
+</li>
+<li><p>到各官网上找到你要的资源的下载路径，复制下载连接</p>
+</li>
+<li><p>到linux服务器的某个路径（个人习惯）,下载到这个目录下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -i -c 下载路径</span><br></pre></td></tr></table></figure></li>
+<li><p>如果需要本地上传资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装lrzsz工具包</span></span><br><span class="line">yum  install lrzsz</span><br><span class="line"><span class="comment">// 在xshell控制台输入 rz  即可上传本地资源</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如果下载的资源是tar.gz后缀的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf  文件名称</span><br></pre></td></tr></table></figure></li>
+<li><p>如果下载的资源是zip后缀的,现在linux服务器下载unzip命令资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找unzip资源的命令</span></span><br><span class="line">yum list unzip*</span><br><span class="line"><span class="comment">//下载unzip资源的命令</span></span><br><span class="line">yum install 资源名称</span><br></pre></td></tr></table></figure></li>
+<li><p>下载jdk   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找jdk资源的命令</span></span><br><span class="line">yum list java*</span><br><span class="line"><span class="comment">//下载jdk资源的命令</span></span><br><span class="line">yum install 资源名称</span><br></pre></td></tr></table></figure></li>
+<li><p>下载Redis</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找redis资源的命令</span></span><br><span class="line">yum list redis*</span><br><span class="line"><span class="comment">//下载jdk资源的命令</span></span><br><span class="line">yum install 资源名称</span><br><span class="line"><span class="comment">// 如果启动不了redis,使用此命令后再启动</span></span><br><span class="line">redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure></li>
+<li><p>解压缩好maven后，进行相应的配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 进入linux配置文件</span></span><br><span class="line">vim /etc/profile</span><br><span class="line"><span class="comment">//修改环境变量</span></span><br><span class="line">MAVEN_HOME=/usr/local/maven</span><br><span class="line">export MAVEN_HOME</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;MAVEN_HOME&#125;/bin</span><br><span class="line"><span class="comment">// 更换maven配置文件，使用阿里云镜像，提高maven仓库的下载速度</span></span><br><span class="line">vim /conf/setting.xml</span><br><span class="line"></span><br><span class="line">&lt;mirror&gt;  </span><br><span class="line">  &lt;id&gt;alimaven&lt;/id&gt;  </span><br><span class="line">  &lt;name&gt;aliyun maven&lt;/name&gt;  </span><br><span class="line">  &lt;url&gt;http:<span class="comment">//maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;  </span></span><br><span class="line">  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;          </span><br><span class="line">&lt;/mirror&gt;</span><br><span class="line"><span class="comment">// 最后执行一下命令，使得环境变量生效</span></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>下载mysql的npm包（自己的百度网盘有）</p>
+<ul>
+<li><p>解压后用 <code>yum install -y npm包文件名</code>安装</p>
+</li>
+<li><p><code>yum list mysql* </code>找到我们要下载的MySQL服务器</p>
+</li>
+<li><p><code>yum install -y mysql服务器包名 </code>进行安装</p>
+</li>
+<li><p><code>systemctl mysqld start </code>启动MySQL服务</p>
+</li>
+<li><p><code>systemctl status mysqld </code>查看MySQL服务器状态</p>
+</li>
+<li><p><code>grep &#39;password&#39; /var/log/mysqld.log </code>查找MySQL服务器刚启动时自动生成的密码</p>
+</li>
+<li><p><code>mysql -u root -p </code>使用自动生成的密码进入MySQL服务器</p>
+</li>
+<li><p><code> alter user root@localhost identified by &#39;new password&#39;</code>修改MySQL密码   </p>
+</li>
+<li><p>以新密码进入数据库<code>mysql -u root -p </code></p>
+</li>
+<li><p>创建你所需的数据库<code>create database ~~~ </code></p>
+</li>
+<li><p>使用你所创建的数据库,导入sql文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /usr/database.sql;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>安装配置Elasticsearch</p>
+<ul>
+<li>先解压elasticsearch</li>
+<li>再解压elasticsearchIk到elasticsearch的plugins/ik目录(unzip -d)</li>
+<li>修改elasticsearch的配置文件（config目录）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//修改clusth名字和存放地址(一般放在和kfka存放地址同个目录)</span></span><br><span class="line">vim elasticsearch.yml</span><br><span class="line"><span class="comment">//修改elasticserch的jvm占量</span></span><br><span class="line"> vim jvm.options</span><br><span class="line"> </span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/Tomcat%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -424,7 +565,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -437,7 +578,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
