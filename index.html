@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-21 19:32:48 / 修改时间：19:39:40" itemprop="dateCreated datePublished" datetime="2021-03-21T19:32:48+08:00">2021-03-21</time>
+              <time title="创建时间：2021-03-21 19:32:48 / 修改时间：19:41:29" itemprop="dateCreated datePublished" datetime="2021-03-21T19:32:48+08:00">2021-03-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,10 +227,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Mysql下载和安装"><a href="#Mysql下载和安装" class="headerlink" title="Mysql下载和安装"></a>Mysql下载和安装</h1><h3 id="1-从官网下载"><a href="#1-从官网下载" class="headerlink" title="1.从官网下载"></a>1.从官网下载</h3><p><img src="https://ftp.bmp.ovh/imgs/2021/03/857084116aaeed7d.jpg" alt="1"><br><img src="https://ftp.bmp.ovh/imgs/2021/03/5776f61a379a4688.png" alt="2"><br><img src="https://ftp.bmp.ovh/imgs/2021/03/5a27ebbbac77cfc7.jpg" alt="3"><br><img src="https://ftp.bmp.ovh/imgs/2021/03/4c3c0315701e6d25.jpg" alt="4"><br><img src="https://ftp.bmp.ovh/imgs/2021/03/cf8f399b1dca6a93.jpg" alt="5"> </p>
-<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h2><p>（1）首先安装包解压后，文件中并没有网上教程里面提到的data文件夹和my-default.ini<br>（2）配置环境变量请参照网上教程，这个一般没有问题，即在环境变量中Path中加入MYSQL解压包bin所在路径，我的是：D:\softnew\MYSQL\mysql-5.7.20-winx64\bin<br>（3）主要注意以下几点：<br>【1】my-default.ini文件存不存在不重要，关键需要自己在根目录下新建一个my.ini文件，具体内容如下：  </p>
-<p>#设置mysql客户端默认字符集<br>[mysql]<br>default-character-set=utf8<br>[mysqld]<br>#设置3306端口<br>port = 3306<br>#设置mysql的安装目录<br>basedir=D:\softnew\MYSQL\mysql-5.7.20-winx64<br>#允许最大连接数<br>max_connections=200<br>#服务端使用的字符集默认为8比特编码的latin1字符集<br>character-set-server=utf8<br>#创建新表时将使用的默认存储引擎<br>default-storage-engine=INNODB<br>可以直接复制粘贴，主要修改下basedir后的路径，注意路径中为\ \而非\<br>【2】<br>(1)以管理员的方式打开cmd命令窗口（直接打开cmd运行，可能会报错），并且进入到mysql安装目录的bin目录下。然后输入命令mysqld install     显示成功<br>2）再输入：mysqld –initialize      此时应该没有任何提示<br>3）再输入：net start mysql     显示<br><img src="https://ftp.bmp.ovh/imgs/2021/03/02d7b04fa7c9263d.jpg" alt="6"><br>4)另注：第一次登陆MYSQL时，会提示要求输入初始密码，这是考虑安全因素，命令：mysqld –initialize会随机生成密码。<br>初始密码在上图data文件夹下的xxx.err文件中，可以用记事本打开，用ctrl+f 查找功能找到如下一行记录：<br>[Note] A temporary password is generated for root@localhost: NZ+uhXPq1zN.<br>其中NZ+uhXPq1zN.即为初始密码（注意.号不要漏了）<br>进入后可以用如下命令修改，这里密码改为root：ALTER USER ‘root’@’localhost’ IDENTIFIED BY ‘root’;<br>5)如果4)出现错误：Access denied for user ‘root’@’localhost’(using password:YES)。<br>6)解决方案：<br>  1.打开MySQL目录下的my.ini文件，在文件的最后添加一行“skip-grant-tables”，保存并关闭文件。（WIN7默认安装，my.ini在C:\ProgramData\MySQL\MySQL Server 5.6）<br>  2.重启MySQL服务。<br>  3.通过命令行进入MySQL的BIN目录，输入“mysql -u root -p”(不输入密码)，提示输入密码不用管，直接Enter回车即可进入数据库。（WIN7默认安装，BIN目录为：C:\Program Files\MySQL\MySQL Server 5.6\bin）<br>  4.执行“use mysql;”，使用mysql数据库。<br>  5.执行“update user set authentication_string=PASSWORD(“123456”) where   user=’root’;”（修改root的密码）<br>  6.打开MySQL目录下的my.ini文件，删除最后一行的“skip-grant-tables”，保存并关闭文件。<br>  7.重启MySQL服务。<br>  8.在命令行中输入“mysql -u root -p 123456”，即可成功连接数据库。<br>    完成以上步骤，MyEclipse也可成功连接MySQL了。</p>
-
+          <h1 id="Mysql下载和安装"><a href="#Mysql下载和安装" class="headerlink" title="Mysql下载和安装"></a>Mysql下载和安装</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/21/MySql%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
