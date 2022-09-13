@@ -158,6 +158,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/Http%E9%80%9A%E8%BF%87Get%E8%AF%B7%E6%B1%82%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E6%97%B6%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%A2%AB%E8%BD%AC%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="KingPuiWong">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/13/Http%E9%80%9A%E8%BF%87Get%E8%AF%B7%E6%B1%82%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E6%97%B6%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%A2%AB%E8%BD%AC%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Http通过Get请求传递参数时特殊字符被转码的处理方式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-09-13 13:08:57 / 修改时间：13:10:17" itemprop="dateCreated datePublished" datetime="2022-09-13T13:08:57+08:00">2022-09-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ResultApi/" itemprop="url" rel="index"><span itemprop="name">ResultApi</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/09/13/Http%E9%80%9A%E8%BF%87Get%E8%AF%B7%E6%B1%82%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E6%97%B6%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%A2%AB%E8%BD%AC%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="Http通过Get请求传递参数时特殊字符被转码的处理方式" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/09/13/Http%E9%80%9A%E8%BF%87Get%E8%AF%B7%E6%B1%82%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E6%97%B6%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%A2%AB%E8%BD%AC%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/09/13/Http%E9%80%9A%E8%BF%87Get%E8%AF%B7%E6%B1%82%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E6%97%B6%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%A2%AB%E8%BD%AC%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">有些符号在URL中是不能直接传递的，如果要在URL中传递这些特殊符号，那么就要使用他们的编码了。</span><br><span class="line">编码的格式为：%加字符的ASCII码，即一个百分号%，后面跟对应字符的ASCII（<span class="number">16</span>进制）码值。例如 空格的编码值是<span class="string">&quot;%20&quot;</span>。</span><br><span class="line">如果不使用转义字符，这些编码就会当URL中定义的特殊字符处理。</span><br><span class="line">下表中列出了一些URL特殊符号及编码 十六进制值</span><br><span class="line"><span class="number">1</span>) + URL 中+号表示空格 %<span class="number">2</span>B</span><br><span class="line"><span class="number">2</span>) 空格 URL中的空格可以用+号或者编码 %<span class="number">20</span></span><br><span class="line"><span class="number">3</span>) / 分隔目录和子目录 %<span class="number">2</span>F</span><br><span class="line"><span class="number">4</span>) ? 分隔实际的 URL 和参数 %<span class="number">3</span>F</span><br><span class="line"><span class="number">5</span>) % 指定特殊字符 %<span class="number">25</span></span><br><span class="line"><span class="number">6</span>) # 表示书签 %<span class="number">23</span></span><br><span class="line"><span class="number">7</span>) &amp;amp; URL 中指定的参数间的分隔符 %<span class="number">26</span></span><br><span class="line"><span class="number">8</span>) = URL 中指定参数的值 %<span class="number">3</span>D</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1016,110 +1104,11 @@ github地址
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/19/Java%E9%9D%A2%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="KingPuiWong">
-      <meta itemprop="description" content="My Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/19/Java%E9%9D%A2%E8%AF%95/" class="post-title-link" itemprop="url">Java面试</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-19 22:04:22" itemprop="dateCreated datePublished" datetime="2021-03-19T22:04:22+08:00">2021-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-24 20:33:07" itemprop="dateModified" datetime="2021-03-24T20:33:07+08:00">2021-03-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2021/03/19/Java%E9%9D%A2%E8%AF%95/" class="post-meta-item leancloud_visitors" data-flag-title="Java面试" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/19/Java%E9%9D%A2%E8%AF%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/19/Java%E9%9D%A2%E8%AF%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p> JAVA面试  （Author：黄景培 ， email ：<a href="mailto:&#x36;&#x31;&#48;&#x30;&#57;&#48;&#50;&#x33;&#x38;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#x36;&#x31;&#48;&#x30;&#57;&#48;&#50;&#x33;&#x38;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a>）</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/19/Java%E9%9D%A2%E8%AF%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1184,20 +1173,20 @@ github地址
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
