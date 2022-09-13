@@ -20,21 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Volatile详解">
+  <meta name="description" content="💡 利用官方库快速构建form请求的参数 github地址  GitHub - google&#x2F;go-querystring: go-querystring is Go library for encoding structs into URL query strings. 演示代码： 123456789101112131415161718192021222324252627282930pack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="volatile详解">
-<meta property="og:url" content="http://example.com/2021/03/24/volatile%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:title" content="GO-构建用&amp;拼接的请求参数">
+<meta property="og:url" content="http://example.com/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="Volatile详解">
+<meta property="og:description" content="💡 利用官方库快速构建form请求的参数 github地址  GitHub - google&#x2F;go-querystring: go-querystring is Go library for encoding structs into URL query strings. 演示代码： 123456789101112131415161718192021222324252627282930pack">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ftp.bmp.ovh/imgs/2021/03/ad491384fa453c25.jpg">
-<meta property="article:published_time" content="2021-03-24T11:40:04.000Z">
-<meta property="article:modified_time" content="2021-03-24T12:36:39.680Z">
+<meta property="article:published_time" content="2022-09-13T05:00:11.000Z">
+<meta property="article:modified_time" content="2022-09-13T05:05:23.239Z">
 <meta property="article:author" content="KingPuiWong">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ftp.bmp.ovh/imgs/2021/03/ad491384fa453c25.jpg">
 
-<link rel="canonical" href="http://example.com/2021/03/24/volatile%E8%AF%A6%E8%A7%A3/">
+<link rel="canonical" href="http://example.com/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>volatile详解 | My Blog</title>
+  <title>GO-构建用&拼接的请求参数 | My Blog</title>
   
 
 
@@ -163,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/24/volatile%E8%AF%A6%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +175,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          volatile详解
+          GO-构建用&拼接的请求参数
         </h1>
 
         <div class="post-meta">
@@ -187,7 +186,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-24 19:40:04 / 修改时间：20:36:39" itemprop="dateCreated datePublished" datetime="2021-03-24T19:40:04+08:00">2021-03-24</time>
+              <time title="创建时间：2022-09-13 13:00:11 / 修改时间：13:05:23" itemprop="dateCreated datePublished" datetime="2022-09-13T13:00:11+08:00">2022-09-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -195,12 +194,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                  <a href="/categories/Go/" itemprop="url" rel="index"><span itemprop="name">Go</span></a>
                 </span>
             </span>
 
           
-            <span id="/2021/03/24/volatile%E8%AF%A6%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="volatile详解" title="阅读次数">
+            <span id="/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="GO-构建用&拼接的请求参数" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -215,8 +214,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/03/24/volatile%E8%AF%A6%E8%A7%A3/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/24/volatile%E8%AF%A6%E8%A7%A3/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/09/13/GO-%E6%9E%84%E5%BB%BA%E7%94%A8-%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -231,23 +230,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Volatile详解"><a href="#Volatile详解" class="headerlink" title="Volatile详解"></a>Volatile详解</h1><span id="more"></span>
+        <aside>
+💡 利用官方库快速构建form请求的参数
+github地址
 
-<ul>
-<li><p>volatile是java虚拟机提供的轻量级的同步机制 ：<br>1.保证可见性<br>2.不保证原子性<br>3.禁止指令重排 </p>
-</li>
-<li><p>JMM(Java内存模型Java Memory Model,简称JMM)本身是一种抽象的概念并不真实存在，他描述的是一组规则或规范，通过这组规范定义了程序中各个变量(包括实例字段，静态字段和构成数组对象的元素)的访问方式。 </p>
-</li>
-<li><p>JMM关于同步的规定：<br>1.线程解锁前，必须把共享变量的值刷新回主内存<br>2.线程加锁前，必须读取主内存的最新值到自己的工作内存<br>3.加锁解锁是同一把锁 </p>
-</li>
-<li><p>由于JVM运行程序的实体是线程，而每个线程创建时JVM都会为其创建一个工作内存(有些地方称为栈空间),工作内存是每个线程的私有数据区域，而JAVA内存模型中规定所有的变量都存储在主内存,主内存是共享内存区域,所有线程都可以访问,但线程对变量的操作(读取赋值等)必须在工作内存中进行,首先要将变量从主内存拷贝的自己的工作内存空间,然后对变量进行操作,操作完成后再将变量写回主内存,不能直接操作主内存中的变量,各个线程中的工作内存中存储着主内存中的变量副本拷贝,因此不同的线程间无法访问对方的工作内存,线程间的通信(传值)必须通过主内存来完成。<br><img src="https://ftp.bmp.ovh/imgs/2021/03/ad491384fa453c25.jpg"></p>
-</li>
-<li><p>JMM：<br>1.可见性(及时通知)<br>2.原子性<br>3.VolatileDemo代码演示可见性+原子性<br>4.有序性    </p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不可见</span></span><br><span class="line"> Class MyData&#123;  </span><br><span class="line">     <span class="comment">// 加上Valatile修饰变为可见，及时通知其他线程，主物理内存的值已经被修改</span></span><br><span class="line">     <span class="keyword">int</span> number=<span class="number">0</span>;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addT060</span><span class="params">()</span></span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.number=<span class="number">60</span>;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VolatileDemo</span></span>&#123;</span><br><span class="line">     MyData myData=<span class="keyword">new</span> MyData();</span><br><span class="line">     <span class="keyword">new</span> Thread(()-&gt;)&#123;</span><br><span class="line">         System.out.println(Thread.currentThread().getName+<span class="string">&quot;\t come in&quot;</span>);</span><br><span class="line">         <span class="keyword">try</span>&#123;</span><br><span class="line">            TimeUnit.SECONDS.sleep(<span class="number">3</span>);</span><br><span class="line">         &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">             e.printStackTrace();</span><br><span class="line">         &#125;</span><br><span class="line">         myData.addT060();</span><br><span class="line">         System.out.println(Thread.currentThread().getName+<span class="string">&quot;\t update number value:&quot;</span>+myData.number);</span><br><span class="line">     &#125;,<span class="string">&quot;AAA&quot;</span>).start();</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">     whhile(myData.number==<span class="number">0</span>)&#123;</span><br><span class="line">         </span><br><span class="line">     &#125;</span><br><span class="line">     System.out.println(Thread.currentThread().getName+<span class="string">&quot;\t mission is over&quot;</span>);</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
-
-
+<p><a target="_blank" rel="noopener" href="https://github.com/google/go-querystring">GitHub - google/go-querystring: go-querystring is Go library for encoding structs into URL query strings.</a></p>
+<p>演示代码：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;github.com/google/go-querystring/query&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func <span class="function"><span class="title">main</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">	type ApiParam struct &#123;</span><br><span class="line">		Id   string <span class="string">`json:&quot;id&quot;`</span></span><br><span class="line">		Name string <span class="string">`json:&quot;name&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	type Options struct &#123;</span><br><span class="line">		ApiParam</span><br><span class="line">		Query   string <span class="string">`url:&quot;q&quot;`</span></span><br><span class="line">		ShowAll bool   <span class="string">`url:&quot;all&quot;`</span></span><br><span class="line">		Page    int    <span class="string">`url:&quot;page&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	param := ApiParam&#123;</span><br><span class="line">		Id:   <span class="string">&quot;11&quot;</span>,</span><br><span class="line">		Name: <span class="string">&quot;jingpei&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	opt := Options&#123;param, <span class="string">&quot;get&quot;</span>, <span class="literal">false</span>, <span class="number">3</span>&#125;</span><br><span class="line">	v, <span class="attr">_</span> := query.Values(opt)</span><br><span class="line">	fmt.Print(v.Encode()) <span class="comment">// will output: &quot;q=foo&amp;all=true&amp;page=2&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -255,6 +244,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          </div>
 
         
 
@@ -262,13 +254,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/21/MySql%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/" rel="prev" title="MySql下载与安装">
-      <i class="fa fa-chevron-left"></i> MySql下载与安装
+    <a href="/2021/03/26/SpringBoot%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/" rel="prev" title="SpringBoot发送邮件">
+      <i class="fa fa-chevron-left"></i> SpringBoot发送邮件
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/24/SpringBoot%E6%95%B4%E5%90%88Mybatis-Plus/" rel="next" title="SpringBoot整合Mybatis-Plus">
-      SpringBoot整合Mybatis-Plus <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -341,7 +330,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Volatile%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">Volatile详解</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -560,7 +548,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'BlobComment',
       owner       : 'KingPuiWong',
       admin       : ['KingPuiWong'],
-      id          : '6140ad53754dfd3c1c72468a813420af',
+      id          : '8c0eefdbdd98a2abdb1a04d5e6005198',
         language: '',
       distractionFreeMode: true
     });
